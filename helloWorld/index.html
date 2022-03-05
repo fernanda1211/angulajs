@@ -1,0 +1,19 @@
+<html ng-app="helloWorld">
+    <head>
+        <title>Hello World</title>
+        <script src="angular.js"></script>
+        <script>
+            //Cria o Modulo
+            angular.module("helloWorld", []); //injeção (importação) de novos modulos (componentes, diretivas, filtros, serviçoes , etc...) 
+            //Localiza do Modulo 
+            angular.module("helloWorld").controller("helloWorldCtrl", function($scope) {
+                $scope.messagem = "Hello World"; 
+            }); 
+        </script> 
+    </head>
+    <body>
+        <div ng-controller="helloWorldCtrl">
+                {{messagem}}
+        </div>
+    </body>
+</html>
